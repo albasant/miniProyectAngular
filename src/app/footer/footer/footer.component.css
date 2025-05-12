@@ -1,0 +1,28 @@
+/* Estilos para el footer */
+.footer-toolbar {
+  background-color: #3f51b5; /* Color azul basado en Angular Material */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Asegurar que el texto del footer esté centrado */
+.footer-text {
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 600px) {
+  .footer-toolbar {
+    padding: 8px;
+  }
+  .footer-text {
+    font-size: 12px;
+  }
+}

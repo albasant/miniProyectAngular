@@ -1,0 +1,22 @@
+.header {
+  background-color: #1976d2; /* Azul Material */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto', sans-serif;
+}
+
+.header h1,
+.header h2 {
+  margin: 10px 0;
+}
+
+.header svg {
+  width: 64px; /* Tamaño aumentado */
+  height: 64px;
+  margin: 10px;
+  fill: white;
+  stroke: white; /* Para mantener consistencia con íconos outline */
+}
