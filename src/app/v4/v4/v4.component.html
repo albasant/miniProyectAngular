@@ -1,0 +1,35 @@
+<!-- Título principal -->
+<h1 class="titulo-principal">Equipo de desarrollo</h1>
+
+<!-- Mostrar todos los usuarios -->
+<div class="user-cards-container">
+  @for (usuario of userData?.user; track usuario) {
+    <mat-card class="user-card">
+      <mat-card-header>
+        <mat-card-title>{{ usuario.nombre }}</mat-card-title>
+        <mat-card-subtitle>ID: {{ usuario.id }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="usuario.imagen" alt="Foto del usuario" class="user-image">
+    </mat-card>
+  }
+</div>
+
+<!-- Sección de búsqueda -->
+<section class="search-section">
+  <mat-form-field appearance="fill" class="search-input">
+    <mat-label>Buscar por nombre</mat-label>
+    <input matInput [(ngModel)]="busquedaNombre" placeholder="Ingresa un nombre">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="buscarUsuario()">Buscar</button>
+
+  <!-- Resultado de la búsqueda -->
+  @if (resultadoBusqueda) {
+    <mat-card class="search-result-card">
+      <mat-card-header>
+        <mat-card-title>{{ resultadoBusqueda.nombre }}</mat-card-title>
+        <mat-card-subtitle>ID: {{ resultadoBusqueda.id }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="resultadoBusqueda.imagen" alt="Resultado de búsqueda" class="user-image">
+    </mat-card>
+  }
+</section>
